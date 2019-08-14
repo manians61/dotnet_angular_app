@@ -20,6 +20,7 @@ namespace DatingApp.API.Controllers
           _context = context;   
         }
         // GET api/values asynv handles multiple users using the same method (Add async Task<>)---
+        [AllowAnonymous]
         [HttpGet]
         public async Task<IActionResult> GetValuse()
         {
@@ -29,7 +30,6 @@ namespace DatingApp.API.Controllers
             return Ok(values);
         }
 
-        [AllowAnonymous]
         [HttpGet("{id}")]
         public async Task<IActionResult> GetValue(int id)
         {
