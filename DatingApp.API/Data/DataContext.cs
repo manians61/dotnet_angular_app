@@ -10,5 +10,6 @@ namespace DatingApp.API.Data
         //<Value> class name, Values DB table names
         public DbSet<Value> Values{get;set;}
         public DbSet<User> Users { get; set; }
+        public DbSet<Photo> Photos { get; set; }
     }
 }
